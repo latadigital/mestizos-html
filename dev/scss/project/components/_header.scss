@@ -1,0 +1,224 @@
+.overlay {
+	display: none;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	z-index: 90;
+}
+@include component('inner') {
+	height: 1%;
+	overflow: hidden;
+	margin: 0px auto;
+	max-width: 1250px;
+	width: 100%;
+}
+
+@include component('header') {
+	@include element('brand') {
+		float: left;
+		max-width: 272px;
+		width: 100%;
+		@media(max-width: 700px) {
+			max-width: initial;
+			text-align: center;
+		}
+
+		img {
+			height: auto;
+			display: inline-block;
+			width: 272px;
+		}
+	}
+
+	@include element('top') {
+		padding: 10px 0px;
+	}
+
+	@include element('faq') {
+		background: #333333;
+	}
+
+	@include element('terms') {
+		float: right;
+		@media(max-width: 700px) {
+			float: none;
+			width: 100%;
+			text-align: center;
+		}
+
+		a {
+			color: #888888;
+			padding: 0px 15px;
+			line-height: 40px;
+			transition: color $transition_duration;
+			@media(max-width: 700px) {
+				font-size: 12px;
+			}
+			&:hover {
+				text-decoration: none;
+				color: #fff;
+			}
+		}
+	}
+
+	@include element('content') {
+		float: right;
+		margin: 17px 0px;
+		@media(max-width: 700px) {
+			display: none;
+		}		
+	}
+
+	@include element('search') {
+		display: inline-block;
+		margin-right: 20px;
+
+		input {
+			height: 30px;
+			border: 1px solid #e5e5e5;
+			border-radius: 5px;
+			outline: none;
+			padding: 0px 10px;
+			width: 290px;
+		}
+	}
+
+	@include element('socials') {
+		display: inline-block;
+
+		a {
+			display: inline-block;
+			height: 25px;
+			width: 25px;
+			text-align: center;
+			line-height: 25px;
+			background: #333333;
+			margin-right: 5px;
+			color: #fff;
+			border-radius: 50%;
+			transition: background $transition-duration;
+			font-size: 14px;
+
+			&:hover {
+				background: #333333 + 50;
+			}
+		}
+	}
+
+	@include element('menu') {
+		background: #000000;
+		@media(max-width: 1050px) {
+			text-align: left;
+		}
+	}
+
+	@include element('nav') {
+		@media(max-width: 1050px) {
+			display: none;
+		}			
+
+		ul {
+			height: 1%;
+			overflow: hidden;				
+
+			li {
+				float: left;
+
+				a {
+					color: #fff;
+					padding: 0px 15px;
+					text-align: center;
+					display: block;
+					text-transform: uppercase;
+					transition: color $transition-duration;
+					line-height: 50px;
+					@media(max-width: 1200px) {
+						font-size: 12px;
+					}
+
+					&:hover {
+						text-decoration: none;
+						color: #f19800;
+					}
+				}
+			}
+		}
+	}
+
+	@include element('open') {
+		display: none;
+		color: #fff;
+		line-height: 40px;
+		width: 40px;
+		font-size: 22px;
+		text-align: center;
+		@media(max-width: 1050px) {
+			display: inline-block;
+		}
+	}
+
+	@include element('socialMobile') {
+		float: right;
+		margin: 7px 0px;
+		display: none;
+		@media(max-width: 700px) {
+			display: block;
+		}
+		
+		a {
+			display: inline-block;
+			height: 25px;
+			width: 25px;
+			text-align: center;
+			line-height: 25px;
+			background: #333333;
+			margin-right: 5px;
+			color: #000;
+			border-radius: 50%;
+			transition: background $transition-duration;
+			font-size: 14px;
+
+			&:hover {
+				background: #333333 + 50;
+			}			
+		}
+	}
+
+	@include element('navMobile') {
+		display: none;
+		position: fixed;
+		top: 0px;
+		left: -100%;
+		z-index: 99;
+		background: #fff;
+		padding-bottom: 50px;
+		transition: left $transition_duration;
+		width: 80%;
+		@media(max-width: 1050px) {
+			display: block;
+		}
+
+		ul {
+			li {
+				border-bottom: 1px solid #e5e5e5;
+				&:last-child {
+					border-bottom: none;
+				}
+
+				a {
+					line-height: 60px;
+					color: #000;
+					text-transform: uppercase;
+					font-weight: 700;
+					padding-left: 30px;
+				}
+			}
+		}
+
+		@include modifier('active') {
+			left: 0px;
+		}
+	}
+}

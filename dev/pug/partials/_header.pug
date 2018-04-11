@@ -1,0 +1,43 @@
+header.c-header
+	.c-header__faq
+		.c-inner
+			.c-header__terms
+				a(href="#") Terminos y condiciones
+				a(href="#") Ayuda
+				a(href="#") Contáctanos		
+	.c-header__top
+		.c-inner
+			.c-header__brand
+				img(src="img/header-logo.png", alt="Mestizos")
+			.c-header__content
+				.c-header__search
+					input(type="text" placeholder="Buscar")
+				.c-header__socials
+					a(href="#")
+						span.fab.fa-facebook-f
+					a(href="#")
+						span.fab.fa-twitter
+					a(href="#")
+						span.fab.fa-instagram
+	.c-header__menu
+		.c-inner
+			.c-header__nav
+				ul
+					each val in ['Home', 'Actualidad animal', 'Cruelty free', 'Mestizos magazine', 'eterinario responde', 'Fauna protegida', 'Alimentación consciente', 'Contacto']
+						li
+							a(href="#") #{val}
+			a#open-nav.c-header__open(href="#")
+				span.fas.fa-bars
+			.c-header__socialMobile
+				a(href="#")
+					span.fab.fa-facebook-f
+				a(href="#")
+					span.fab.fa-twitter
+				a(href="#")
+					span.fab.fa-instagram
+	.c-header__navMobile
+		ul
+			each val in ['Home', 'Actualidad animal', 'Cruelty free', 'Mestizos magazine', 'eterinario responde', 'Fauna protegida', 'Alimentación consciente', 'Contacto']
+				li
+					a(href="#") #{val}
+	.overlay(style="display:none;")
