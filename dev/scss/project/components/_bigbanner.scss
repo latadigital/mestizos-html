@@ -1,0 +1,18 @@
+@include component('bigbanner') {
+    margin-bottom: 150px;
+    
+    @include element('slides') {
+        height: 1%;
+        overflow: hidden;
+    }
+
+    @include element('slide') {
+        img {
+            height: 1%;
+            overflow: hidden;
+            display: block;
+            line-height: 0;
+            width: 100%;
+        }
+    }
+}
