@@ -1,0 +1,39 @@
+extends layouts/default.pug
+
+block vars
+    - pageTitle = 'Contacto'
+
+block content
+    .c-contacto
+        .c-inner
+            .c-contacto__title
+                h1 Contacto
+                span
+                    img(src="img/icon-paw.jpg")            
+            .c-contacto__boxes
+                .c-contacto__form
+                    form(action="#")
+                        .input.name
+                            input(type="text" placeholder="Nombre")
+                        .input.email
+                            input(type="text" placeholder="Email")
+                        .input.message
+                            textarea(name="" placeholder="Mensaje")
+                        .input.submit
+                            input(type="submit" value="Enviar")
+                .c-contacto__info
+                    ul
+                        li
+                            strong Teléfono
+                            span +569 9 123 4567 
+                            | |
+                            span +569 9 123 4567
+                        li 
+                            strong E-mail
+                            | contacto@mestizosmagazine.cl
+                        li
+                            strong Dirección
+                            | Calle 123 Región Metropolitana, Chile
+                    .c-contacto__dog
+                        img(src="img/contacto-dog.png")
+block append scripts

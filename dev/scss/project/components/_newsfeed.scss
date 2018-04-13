@@ -1,4 +1,5 @@
-@include component('newsWrapper') {
+@include component('newsfeed') {
+    padding-top: 60px;
     padding-bottom: 100px;
 
     @include element('title') {
@@ -43,13 +44,15 @@
     @include element('news') {
         height: 1%;
         overflow: hidden;
+        text-align: center;
     }
 
     @include element('article') {
-        float: left;
+        display: inline-block;
         position: relative;
         padding: 0px 10px;
-        width: 33.3%;
+        margin-bottom: 50px;
+        width: 33%;
         @media(max-width:762px) {
             width: 100%;
         }
@@ -135,13 +138,5 @@
         &:hover {
             color: #f19800;
         }
-    }
-}
-
-@include component('ads') {
-    margin-bottom: 50px;
-    img {
-        height: auto;
-        width: 100%;
     }
 }

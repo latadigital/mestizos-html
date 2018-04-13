@@ -1,0 +1,27 @@
+extends layouts/default.pug
+
+block vars
+    - pageTitle = 'Categoria'
+
+block content
+    .c-newsfeed
+        .c-inner
+            .c-newsfeed__title
+                h1 Actualidad animal
+                span
+                    img(src="img/icon-paw.jpg")
+            #container__news.c-newsfeed__news
+                each item in ['img/newsfee-large.png', 'img/newsfee-small.png', 'img/newsfee-large.png','img/newsfee-large.png', 'img/newsfee-small.png', 'img/newsfee-large.png']
+                    .c-newsfeed__article
+                        figure
+                            img(src= item alt="Alt noticia")
+                        span
+                            strong 16
+                            br
+                            | Marzo
+                        h3 Reportajes
+                        h1 Unos 50 animales formarán parte de la boda de Kaley Cuoco
+                        p Caballos, perros, gallinas y conejos forman parte de la familia de la actriz de The Big Bang Theory.
+                        a(href="#") Leer
+
+block append scripts
