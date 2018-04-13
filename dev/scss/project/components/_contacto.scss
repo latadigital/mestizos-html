@@ -44,6 +44,9 @@
     @include element('boxes') {
         height: 1%;
         overflow: hidden;
+        @media(max-width: 1300px) {
+            padding: 0px 10px;
+        }
     }
 
     @include element('form') {

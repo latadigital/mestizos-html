@@ -11,11 +11,11 @@ $(document).ready(function() {
 		$('.c-header__navMobile').addClass('c-header__navMobile--active');
 
 		e.preventDefault();
+	});
+		
+	var container = document.querySelector('#container__news');
+	var containerWidth = container.offsetWidth;
+	var msnry = new Masonry(container, {
+		itemSelector: '.c-newsfeed__article'
 	});	
-});
-
-var container = document.querySelector('#container__news');
-var containerWidth = container.offsetWidth;
-var msnry = new Masonry(container, {
-	itemSelector: '.c-newsfeed__article'
 });
